@@ -17,7 +17,7 @@ app.get("/all", async (req, res) => {
 
 app.post("/short", async (req, res) => {
   const { originalUrl } = req.body;
-  const base = `http://localhost:5000`;
+  const base = `https://url-shortener-backend-lake.vercel.app`;
 
   const urlId = shortid.generate();
   if (urlValidator(originalUrl)) {
