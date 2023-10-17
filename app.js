@@ -61,4 +61,10 @@ app.get("/:urlId", async (req, res) => {
   }
 });
 
+app.use("/", async (req, res) => {
+  res.send(
+    `<h1>Welcome to url shortener api</h1><h4>add /all to the url to see all available database data.</h4>`
+  );
+});
+
 module.exports = app;
